@@ -85,6 +85,27 @@ body {
   color: #e5813e;
 }
 
+#theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  margin-left: 2vw;
+}
+
+#theme-toggle i {
+  font-size: 1.38vw;
+  color: #e7cfb1;
+  transition: all 0.3s ease;
+}
+
+#theme-toggle:hover {
+  background: rgba(231, 207, 177, 0.1);
+}
+
 #page1 {
   min-height: 95vh;
   display: flex;
@@ -599,4 +620,49 @@ body {
   100% {
     rotate: 360deg;
   }
+}
+
+/* Light theme styles */
+body.light-theme {
+  background-color: #f5f5f5;
+}
+
+.light-theme #main {
+  background-color: #ffffff;
+}
+
+.light-theme #nav #nav-links h4,
+.light-theme #nav-svg path,
+.light-theme #theme-toggle i {
+  color: #151414;
+}
+
+.light-theme #page1 h1,
+.light-theme #page1 h2,
+.light-theme #page3-content h1,
+.light-theme #page3-bottom-text h3 {
+  color: #151414;
+}
+
+.light-theme #page4-top-media-container h3,
+.light-theme #page4-bottom-media-container h3 {
+  color: #151414;
+}
+
+.light-theme #page8-content h1 {
+  color: #151414;
+}
+
+.light-theme #page9 h1 {
+  color: #151414;
+}
+
+.light-theme #page9-bottom-nav h4 {
+  color: #151414;
+}
+
+.light-theme #page4-circle-svg path,
+.light-theme #svg-arrow path {
+  stroke: #151414;
+  fill: #151414;
 }

@@ -307,3 +307,36 @@ function page8Anime() {
 };
 
 page8Anime();
+
+// Theme Toggle Functionality
+function themeToggle() {
+    const themeToggle = document.querySelector('#theme-toggle');
+    const body = document.body;
+    const themeIcon = themeToggle.querySelector('i');
+    
+    // Check for saved user preference, if any, on load of the website
+    const darkMode = localStorage.getItem('darkMode');
+    
+    if (darkMode === 'light') {
+        body.classList.add('light-theme');
+        themeIcon.classList.remove('ri-sun-line');
+        themeIcon.classList.add('ri-moon-line');
+    }
+
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('light-theme');
+        
+        // Update icon
+        if (body.classList.contains('light-theme')) {
+            themeIcon.classList.remove('ri-sun-line');
+            themeIcon.classList.add('ri-moon-line');
+            localStorage.setItem('darkMode', 'light');
+        } else {
+            themeIcon.classList.remove('ri-moon-line');
+            themeIcon.classList.add('ri-sun-line');
+            localStorage.setItem('darkMode', 'dark');
+        }
+    });
+}
+
+themeToggle();
